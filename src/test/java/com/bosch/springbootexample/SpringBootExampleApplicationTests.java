@@ -11,6 +11,9 @@ public class SpringBootExampleApplicationTests {
 
     @Test
     public void contextLoads() {
+        /*
+         test the PersonService methods
+         */
     }
 
 }

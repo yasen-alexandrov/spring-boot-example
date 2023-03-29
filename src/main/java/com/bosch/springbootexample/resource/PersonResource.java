@@ -3,7 +3,6 @@ package com.bosch.springbootexample.resource;
 import com.bosch.springbootexample.model.Person;
 import com.bosch.springbootexample.service.PersonService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

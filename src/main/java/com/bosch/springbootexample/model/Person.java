@@ -1,9 +1,6 @@
 package com.bosch.springbootexample.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Person {
@@ -14,8 +11,18 @@ public class Person {
     private String firstName;
     private String lastName;
     private Integer age;
+    @ManyToOne(cascade=CascadeType.ALL)
+    @JoinColumn(name = "department_id", nullable=false)
+    private Department department;
 
     public Person() {
+    }
+
+    public Person(String firstName, String lastName, Integer age, Department department) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.department = department;
     }
 
     public Integer getId() {
@@ -48,5 +55,13 @@ public class Person {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }

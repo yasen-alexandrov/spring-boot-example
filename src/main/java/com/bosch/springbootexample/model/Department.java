@@ -10,7 +10,7 @@ public class Department {
     private Integer id;
     private String name;
 
-    // Mapping to the other table
+//     Mapping to the other table
 //    @OneToMany(cascade = CascadeType.ALL)
 //    private List<Person> people;
 
